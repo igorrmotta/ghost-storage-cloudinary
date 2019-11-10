@@ -85,7 +85,7 @@ class CloudinaryAdapter extends StorageBase {
             return rjs.retinize(image);
         }
 
-        return this.uploader(image.path, uploaderOptions, false);
+        return this.uploader(image.path, uploaderOptions, true);
     }
 
     /**
@@ -108,7 +108,7 @@ class CloudinaryAdapter extends StorageBase {
                 }));
             }
             if (url) {
-                return resolve(cloudinary.url(res.public_id.concat('.', res.format), options.fetch));
+                return resolve(res.public_id.concat('.', res.format));
             }
             return resolve();
         }));
