@@ -85,7 +85,7 @@ class CloudinaryAdapter extends StorageBase {
             return rjs.retinize(image);
         }
 
-        return this.uploader(image.path, uploaderOptions, true);
+        return this.uploader(image.path, uploaderOptions, false);
     }
 
     /**
